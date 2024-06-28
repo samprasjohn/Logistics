@@ -1,0 +1,19 @@
+--select query with shipperID 
+SELECT * FROM loads WHERE shipper_id = 'shipper:<UUID>'; 
+
+--select query with ID
+SELECT * FROM loads WHERE id = <id>; 
+
+--insert query 
+INSERT INTO loads (loading_point, unloading_point, product_type, truck_type, no_of_trucks, weight, comment, shipper_id, load_date)
+VALUES ('delhi', 'jaipur', 'chemicals', 'canter', 1, 100, '', 'shipper:<UUID>', 'dd-mm-yyyy'); 
+
+--update query
+UPDATE loads
+SET loading_point = 'alwar', unloading_point = 'jaipur', comment = '', load_date = 'dd-mm-yyyy'
+WHERE id = <id>; 
+
+--delete query
+DELETE FROM loads
+WHERE id = <id>;
+
